@@ -3,43 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ - Modern Website</title>
+    <title>FAQ - Venice! The Dream City</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/themes.css">
+    <script src="https://kit.fontawesome.com/01991edacd.js" crossorigin="anonymous"></script>
 </head>
 <body class="light-theme">
     <header>
         <nav class="main-nav">
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                <span class="theme-icon"></span>
+            </button>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="register.html">Register</a></li>
+                <li><a href="guides.html">Guides</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
                 <li><a href="faq.html" class="active">FAQ</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
             </ul>
+            <a href="register.html" class="btn-signup">Sign Up</a>
         </nav>
-        <button id="theme-toggle">Toggle Theme</button>
     </header>
 
     <main>
         <section class="faq">
             <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about our services, features, and more.</p>
             <div class="faq-list">
                 <div class="faq-item">
-                    <button class="faq-question">What features does your website offer?</button>
+                    <button class="faq-question" aria-expanded="false" data-index="0">
+                        <span>What features does your website offer?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
                     <div class="faq-answer">
-                        <p>Our website offers various features including user registration, image gallery, and theme customization.</p>
+                        <p>Our website provides comprehensive guides, featured attractions, and a seamless registration process. Explore Venice like never before!</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">How do I change the website theme?</button>
+                    <button class="faq-question" aria-expanded="false" data-index="1">
+                        <span>How do I change the website theme?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
                     <div class="faq-answer">
-                        <p>You can change the theme by clicking the "Toggle Theme" button in the header.</p>
+                        <p>You can switch between light and dark themes using the "Toggle Theme" button in the header.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">Is registration required?</button>
+                    <button class="faq-question" aria-expanded="false" data-index="2">
+                        <span>Do I need to register to access guides and attractions?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
                     <div class="faq-answer">
-                        <p>Registration is optional but gives you access to additional features.</p>
+                        <p>Registration is optional, but signing up allows you to bookmark your favorite guides and attractions for a personalized experience.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" data-index="3">
+                        <span>Can I contact a guide directly?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, once you register, you can contact guides directly to book personalized tours.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" data-index="4">
+                        <span>Is there support for travelers with special needs?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! Our guides are trained to accommodate various needs and ensure a comfortable experience for everyone.</p>
                     </div>
                 </div>
             </div>
@@ -47,9 +79,40 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Your Website. All rights reserved.</p>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>We are your trusted guide to Venice, connecting you with expert locals to create unforgettable memories in this dream city.</p>
+            </div>
+            <div class="footer-nav">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="guides.html">Guides</a></li>
+                    <li><a href="attractions.html">Attractions</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info@venice.com">info@venice.com</a></p>
+                <p>Phone: <a href="tel:+123456789">+1 234 567 89</a></p>
+                <p>Address: Venice, Italy</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Toursimo Co Limited. All Rights Reserved.</p>
+        </div>
     </footer>
-
     <script src="js/theme.js"></script>
     <script src="js/faq.js"></script>
 </body>

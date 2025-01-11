@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venice Guides</title>
+    <script src="https://kit.fontawesome.com/01991edacd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes.css">
+</head>
+<body class="light-theme">
+    <header>
+        <nav class="main-nav">
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                <span class="theme-icon"></span>
+            </button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#guides" class="active">Guides</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <a href="register.html" class="btn-signup">Sign Up</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Meet Our Expert Guides</h1>
+                <p>Discover Venice with the help of passionate and knowledgeable locals who will make your visit unforgettable.</p>
+            </div>
+        </section>
+
+        <section id="guides" class="features guides">
+            <h2>Explore Our Guides</h2>
+            <div class="feature-grid">
+                <!-- Guide 1 -->
+                <article id="john-doe" class="feature-card">
+                    <div class="feature-image guide-1"></div>
+                    <div class="feature-text">
+                        <h3>John Doe</h3>
+                        <p>
+                            John is a local historian who has spent decades studying the rich cultural heritage of Venice. 
+                            His tours take you beyond the usual tourist routes to the heart of Venetian history.
+                        </p>
+                        <button class="toggle-button" onclick="toggleAvailability('john-doe-availability')">
+                            Show Available Times
+                        </button>
+                        <!-- Availability Section -->
+                        <div id="john-doe-availability" class="guide-availability">
+                            <h4>Available Reservation Times</h4>
+                            <div class="reservation-times">
+                                <span>10:00 AM - 11:00 AM</span>
+                                <span>1:00 PM - 2:00 PM</span>
+                                <span>3:30 PM - 4:30 PM</span>
+                                <span>5:00 PM - 6:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+        
+                <!-- Guide 2 -->
+                <article id="maria-rossi" class="feature-card">
+                    <div class="feature-image guide-2"></div>
+                    <div class="feature-text">
+                        <h3>Maria Rossi</h3>
+                        <p>
+                            Maria is an expert in Venetian cuisine. She will guide you to the best eateries, bustling food markets, 
+                            and hidden culinary treasures.
+                        </p>
+                        <button class="toggle-button" onclick="toggleAvailability('maria-rossi-availability')">
+                            Show Available Times
+                        </button>
+                        <!-- Availability Section -->
+                        <div id="maria-rossi-availability" class="guide-availability">
+                            <h4>Available Reservation Times</h4>
+                            <div class="reservation-times">
+                                <span>9:00 AM - 10:00 AM</span>
+                                <span>11:30 AM - 12:30 PM</span>
+                                <span>2:00 PM - 3:00 PM</span>
+                                <span>4:30 PM - 5:30 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+        
+                <!-- Guide 3 -->
+                <article id="luigi-moretti" class="feature-card">
+                    <div class="feature-image guide-3"></div>
+                    <div class="feature-text">
+                        <h3>Luigi Moretti</h3>
+                        <p>
+                            Luigi is a specialist in Venetian art and architecture. His tours include visits to iconic landmarks and galleries.
+                        </p>
+                        <button class="toggle-button" onclick="toggleAvailability('luigi-moretti-availability')">
+                            Show Available Times
+                        </button>
+                        <!-- Availability Section -->
+                        <div id="luigi-moretti-availability" class="guide-availability">
+                            <h4>Available Reservation Times</h4>
+                            <div class="reservation-times">
+                                <span>8:00 AM - 9:00 AM</span>
+                                <span>12:00 PM - 1:00 PM</span>
+                                <span>3:00 PM - 4:00 PM</span>
+                                <span>6:00 PM - 7:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>We connect travelers with experienced local guides to make every visit to Venice unforgettable. Start your adventure with us today!</p>
+            </div>
+            <div class="footer-nav">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#guides">Guides</a></li>
+                    <li><a href="attractions.html">Attractions</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info@venice.com">info@venice.com</a></p>
+                <p>Phone: <a href="tel:+123456789">+1 234 567 89</a></p>
+                <p>Address: Venice, Italy</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Toursimo Co Limited. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+</body>
+</html>

@@ -1,32 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelectorAll('.slides img');
-    if (slides.length === 0) return;
+    const slideshows = document.querySelectorAll('.slideshow');
 
-    let currentSlide = 0;
-    slides[0].classList.add('active');
+    slideshows.forEach(slideshow => {
+        const slides = slideshow.querySelectorAll('.slides img');
+        const prevButton = slideshow.querySelector('.prev');
+        const nextButton = slideshow.querySelector('.next');
+        let currentSlide = 0;
 
-    const showSlide = (index) => {
-        slides.forEach(slide => slide.classList.remove('active'));
-        slides[index].classList.add('active');
-    };
+        // Show the first slide
+        slides[currentSlide].classList.add('active');
 
-    const nextSlide = () => {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    };
+        const updateSlides = (index) => {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        };
 
-    const prevSlide = () => {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
-    };
+        prevButton.addEventListener('click', () => {
+            currentSlide = (currentSlide === 0) ? slides.length - 1 : currentSlide - 1;
+            updateSlides(currentSlide);
+        });
 
-    // Auto-advance slides every 5 seconds
-    setInterval(nextSlide, 5000);
-
-    // Manual navigation
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-
-    prevButton.addEventListener('click', prevSlide);
-    nextButton.addEventListener('click', nextSlide);
+        nextButton.addEventListener('click', () => {
+            currentSlide = (currentSlide === slides.length - 1) ? 0 : currentSlide + 1;
+            updateSlides(currentSlide);
+        });
+    });
 });

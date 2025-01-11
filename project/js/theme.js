@@ -13,3 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('theme', currentTheme);
     });
 });
+
+function toggleAvailability(availabilityId) {
+    // Get all cards
+    const allCards = document.querySelectorAll('.feature-card');
+
+    allCards.forEach(card => {
+        // Check if the card contains the clicked availability section
+        const availabilitySection = card.querySelector(`#${availabilityId}`);
+        if (availabilitySection) {
+            card.classList.toggle('active'); // Toggle the active class on the clicked card
+        } else {
+            card.classList.remove('active'); // Ensure other cards are collapsed
+        }
+    });
+}

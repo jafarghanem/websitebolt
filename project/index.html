@@ -3,50 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Website</title>
+    <title>Venice! The Dream City</title>
+    <script src="https://kit.fontawesome.com/01991edacd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/themes.css">
 </head>
 <body class="light-theme">
     <header>
         <nav class="main-nav">
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                <span class="theme-icon"></span>
+            </button>
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="register.html">Register</a></li>
+                <li><a href="guides.html">Guides</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
                 <li><a href="faq.html">FAQ</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
             </ul>
+            <a href="register.html" class="btn-signup">Sign Up</a>
         </nav>
-        <button id="theme-toggle">Toggle Theme</button>
     </header>
-
     <main>
+        <!-- Hero Section -->
         <section class="hero">
-            <h1>Welcome to Our Website</h1>
-            <p>Discover amazing features and content</p>
+            <div class="hero-content">
+                <h1>Welcome To Venice<br>The Heaven Made On Waters</h1>
+                <p>Discover the beauty of Venice and its timeless landmarks</p>
+                <div class="hero-buttons">
+                    <a href="#guides" class="btn">Meet Our Guides</a>
+                    <a href="#attractions" class="btn btn-secondary">Explore Destinations</a>
+                </div>
+            </div>
         </section>
 
-        <section class="features">
-            <h2>Our Features</h2>
+        <!-- Featured Attractions Section -->
+        <section id="attractions" class="features">
+            <h2>Featured Attractions</h2>
             <div class="feature-grid">
                 <article class="feature-card">
-                    <h3>Feature 1</h3>
-                    <p>Description of feature 1</p>
+                    <a href="attractions.html#rialto-bridge">
+                        <div class="feature-image feature-1"></div>
+                    </a>
+                    <div class="feature-text">
+                        <h3>Ponte di Rialto</h3>
+                        <p>The oldest of the four bridges spanning the Grand Canal in Venice, Italy.</p>
+                    </div>
                 </article>
                 <article class="feature-card">
-                    <h3>Feature 2</h3>
-                    <p>Description of feature 2</p>
+                    <a href="attractions.html#la-fenice">
+                        <div class="feature-image feature-2"></div>
+                    </a>
+                    <div class="feature-text">
+                        <h3>Teatro La Fenice</h3>
+                        <p>Teatro La Fenice is a historic opera house in Venice, Italy. It is one of "the most famous and renowned landmarks in the history of Italian theatre" and in the history of opera as a whole.</p>
+                    </div>
                 </article>
                 <article class="feature-card">
-                    <h3>Feature 3</h3>
-                    <p>Description of feature 3</p>
+                    <a href="attractions.html#saint-marks">
+                        <div class="feature-image feature-3"></div>
+                    </a>
+                    <div class="feature-text">
+                        <h3>Saint Mark's Basilica</h3>
+                        <p>The Patriarchal Cathedral Basilica of Saint Mark, commonly known as St Mark's Basilica, is the cathedral church of the Patriarchate of Venice.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- About Venice Section -->
+        <section class="about-city">
+            <h2>About Venice</h2>
+            <p>
+                Venice, known as "La Serenissima," is one of the most unique cities in the world. Built on over 100 small islands in a lagoon on the Adriatic Sea, Venice is a marvel of engineering and artistry. Its canals serve as roads, and its gondolas are iconic symbols of romantic charm. Every corner of Venice is steeped in history, from the grandeur of the Doge's Palace to the stunning mosaics of St. Mark's Basilica.
+            </p>
+            <p>
+                The city is a vibrant blend of culture, art, and history. It has inspired countless artists, poets, and musicians through the ages. Explore its narrow alleys to find hidden gems like quaint cafes, local artisan shops, and peaceful courtyards. Venice is also famous for its festivals, such as the Venice Carnival, where vibrant masks and costumes transform the city into a magical spectacle.
+            </p>
+            <p>
+                While visiting Venice, you can take a leisurely ride along the Grand Canal, visit the nearby islands of Murano and Burano known for their glassmaking and colorful houses, or enjoy authentic Venetian cuisine featuring seafood risottos, cicchetti, and tiramisu. Whether you're a history enthusiast, an art lover, or simply looking for a romantic getaway, Venice offers something for everyone.
+            </p>
+        </section>
+
+        <!-- Explore Guides Section -->
+        <section id="guides" class="features guides">
+            <h2>Explore Guides</h2>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <a href="guides.html#john-doe">
+                        <div class="feature-image guide-1"></div>
+                    </a>
+                    <div class="feature-text">
+                        <h3>John Doe</h3>
+                        <p>A local historian specializing in the rich cultural heritage of Venice. Let John show you the hidden gems of the city.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <a href="guides.html#maria-rossi">
+                        <div class="feature-image guide-2"></div>
+                    </a>
+                    <div class="feature-text">
+                        <h3>Maria Rossi</h3>
+                        <p>An expert on Venetian cuisine, Maria will guide you through the city's best eateries and food markets.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <a href="guides.html#luigi-moretti">
+                        <div class="feature-image guide-3"></div>
+                    </a>
+                    <div class="feature-text">
+                        <h3>Luigi Moretti</h3>
+                        <p>Specializing in Venetian art and architecture, Luigi's tours include visits to iconic landmarks and galleries.</p>
+                    </div>
                 </article>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Your Website. All rights reserved.</p>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>Discover the beauty of Venice, its timeless landmarks, and its unique charm. Your journey to the dream city starts here!</p>
+            </div>
+            <div class="footer-nav">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#guides">Guides</a></li>
+                    <li><a href="#attractions">Attractions</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info@venice.com">info@venice.com</a></p>
+                <p>Phone: <a href="tel:+123456789">+1 234 567 89</a></p>
+                <p>Address: Venice, Italy</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Toursimo Co Limited. All Rights Reserved.</p>
+        </div>
     </footer>
 
     <script src="js/theme.js"></script>

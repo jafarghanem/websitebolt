@@ -4,16 +4,21 @@ document.addEventListener('DOMContentLoaded', () => {
     faqQuestions.forEach(question => {
         question.addEventListener('click', () => {
             const answer = question.nextElementSibling;
-            const isOpen = answer.classList.contains('active');
+            const isExpanded = question.getAttribute('aria-expanded') === 'true';
 
-            // Close all answers
-            document.querySelectorAll('.faq-answer').forEach(a => {
-                a.classList.remove('active');
+            // Close all other answers
+            document.querySelectorAll('.faq-question').forEach(q => {
+                q.setAttribute('aria-expanded', 'false');
+                q.nextElementSibling.classList.remove('active');
             });
 
-            // Toggle current answer
-            if (!isOpen) {
+            // Toggle current question
+            if (!isExpanded) {
+                question.setAttribute('aria-expanded', 'true');
                 answer.classList.add('active');
+            } else {
+                question.setAttribute('aria-expanded', 'false');
+                answer.classList.remove('active');
             }
         });
     });

@@ -17,6 +17,61 @@ document.addEventListener('DOMContentLoaded', () => {
         errorElements.forEach(element => element.textContent = '');
     };
 
+    // Real-time validation for each input field
+    const realTimeValidation = (event) => {
+        const { name, value } = event.target;
+
+        switch (name) {
+            case 'firstName':
+                if (!validateName(value)) {
+                    showError('firstNameError', 'Please enter a valid first name (letters only)');
+                } else {
+                    showError('firstNameError', '');
+                }
+                break;
+            case 'lastName':
+                if (!validateName(value)) {
+                    showError('lastNameError', 'Please enter a valid last name (letters only)');
+                } else {
+                    showError('lastNameError', '');
+                }
+                break;
+            case 'mobile':
+                if (!validateMobile(value)) {
+                    showError('mobileError', 'Please enter a valid mobile number (11 digits starting with 09)');
+                } else {
+                    showError('mobileError', '');
+                }
+                break;
+            case 'email':
+                if (!validateEmail(value)) {
+                    showError('emailError', 'Please enter a valid email address');
+                } else {
+                    showError('emailError', '');
+                }
+                break;
+            case 'password':
+                if (!validatePassword(value)) {
+                    showError('passwordError', 'Password must be at least 6 characters long');
+                } else {
+                    showError('passwordError', '');
+                }
+                break;
+            case 'confirmPassword':
+                const password = form.password.value;
+                if (value !== password) {
+                    showError('confirmPasswordError', 'Passwords do not match');
+                } else {
+                    showError('confirmPasswordError', '');
+                }
+                break;
+        }
+    };
+
+    // Add real-time validation to all input fields
+    const inputs = form.querySelectorAll('input, textarea');
+    inputs.forEach(input => input.addEventListener('input', realTimeValidation));
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         clearErrors();
@@ -61,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (isValid) {
             const successMessage = document.getElementById('successMessage');
-            successMessage.textContent = 'Your registration was successful';
+            successMessage.textContent = 'Your registration was successful!';
             form.reset();
         }
     });

@@ -5,6 +5,8 @@
     --primary-color: #4a90e2;
     --secondary-color: #f5f5f5;
     --border-color: #dddddd;
+    --button-color : rgb(210, 70, 20);
+    --alt-button-color: #4a90e2;
 }
 
 /* Dark Theme */
@@ -14,6 +16,8 @@
     --primary-color: #64b5f6;
     --secondary-color: #333333;
     --border-color: #444444;
+    --button-color : #64b5f6;
+    --alt-button-color: rgb(210, 70, 20);
 }
 
 body {
